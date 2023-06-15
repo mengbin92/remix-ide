@@ -1,0 +1,17 @@
+version: '3.3'
+
+networks:
+  solidity:
+
+
+services:
+  remix-ide:
+    # image: mengbin92/remix:0.33.2
+    build: .
+    container_name: remix-ide
+    volumes:
+      - ./:/app
+    ports:
+      - 8080:80
+    networks:
+      - solidity
