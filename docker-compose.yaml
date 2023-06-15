@@ -6,8 +6,9 @@ networks:
 
 services:
   remix-ide:
-    # image: mengbin92/remix:0.33.2
-    build: .
+    restart: always
+    image: mengbin92/remix:0.33.2
+    # build: .
     container_name: remix-ide
     volumes:
       - ./:/app
